@@ -52,7 +52,7 @@ public class EmployeeService {
     }
 
     private void validateInput(String firstName, String lastName) {
-        if(isAlpha(firstName) && isAlpha(lastName)){
+        if(!isAlpha(firstName) && !isAlpha(lastName)){
             throw new EmployeeInvalidInput();
         }
     }
