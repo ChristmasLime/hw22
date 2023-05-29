@@ -39,6 +39,7 @@ public class EmployeeController {
     @GetMapping("/remove")
     public Employee remove(@RequestParam String firstName, @RequestParam String lastName) {
         return service.remove(firstName, lastName);
+
     }
 
 }
