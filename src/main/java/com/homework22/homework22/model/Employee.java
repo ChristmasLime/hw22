@@ -2,6 +2,8 @@ package com.homework22.homework22.model;
 
 import java.util.Objects;
 
+import static org.springframework.util.StringUtils.capitalize;
+
 public class Employee {
     private final String firstName;
     private final String lastName;
@@ -9,8 +11,8 @@ public class Employee {
     private final int departmentId;
 
     public Employee(String firstName, String lastName, double salary, int departmentId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName =capitalize(firstName.toLowerCase()) ;
+        this.lastName = capitalize(lastName.toLowerCase());
         this.salary = salary;
         this.departmentId = departmentId;
     }
